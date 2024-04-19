@@ -1,65 +1,89 @@
-# API Authentication System - Sample Documentation
+# API Management System with Authentication - Sample Documentation
 
-This documentation provides sample code snippets demonstrating how to use the API Authentication System to register users, authenticate users, and manage user sessions.
+This documentation provides sample code snippets demonstrating how to use the API Management System with authentication to manage APIs, including authentication, authorization, and access control.
 
-## Registering a New User
+## Authenticating with the API Management System
 
-To register a new user, send a POST request to the `/register` endpoint with the user's details (username, email, password) in the request body.
-
-### Example (using Python requests library):
-
-```python
-import requests
-
-url = 'https://api.authsystem.com/v1/register'
-data = {'username': 'example_user', 'email': 'user@example.com', 'password': 'password123'}
-response = requests.post(url, json=data)
-
-if response.status_code == 200:
-    print('User registration successful.')
-else:
-    print('User registration failed:', response.text)
-```
-
-## Authenticating a User
-
-To authenticate a user and obtain an access token, send a POST request to the `/login` endpoint with the user's email and password in the request body.
+To authenticate with the API Management System, include an API key in the headers of each request.
 
 ### Example (using Python requests library):
 
 ```python
 import requests
 
-url = 'https://api.authsystem.com/v1/login'
-data = {'email': 'user@example.com', 'password': 'password123'}
-response = requests.post(url, json=data)
+base_url = 'https://api.apimanagement.com/v1'
+api_key = '<YOUR_API_KEY>'
 
-if response.status_code == 200:
-    access_token = response.json()['access_token']
-    print('Access token:', access_token)
-else:
-    print('Authentication failed:', response.text)
-```
-
-## Managing User Sessions
-
-To manage user sessions, use the access token obtained during authentication. Include the access token in the headers of subsequent requests to authenticate the user.
-
-### Example (using Python requests library):
-
-```python
-import requests
-
-url = 'https://api.example.com/v1/protected/resource'
-headers = {'Authorization': 'Bearer <ACCESS_TOKEN>'}
+# List all APIs
+url = f'{base_url}/apis'
+headers = {'Authorization': f'ApiKey {api_key}'}
 response = requests.get(url, headers=headers)
 
 if response.status_code == 200:
-    print('Resource accessed successfully.')
+    apis = response.json()
+    print('List of APIs:', apis)
 else:
-    print('Access denied:', response.text)
+    print('Failed to retrieve APIs:', response.text)
+```
+
+## Adding a New API
+
+To add a new API to the system, send a POST request to the `/apis` endpoint with the API details and include the API key in the headers for authentication.
+
+### Example (using Python requests library):
+
+```python
+import requests
+
+base_url = 'https://api.apimanagement.com/v1'
+api_key = '<YOUR_API_KEY>'
+
+# Add a new API
+url = f'{base_url}/apis'
+headers = {'Authorization': f'ApiKey {api_key}'}
+data = {
+    'name': 'New API',
+    'description': 'Description of the new API',
+    'base_url': 'https://api.example.com/v1',
+    # Additional API details...
+}
+response = requests.post(url, json=data, headers=headers)
+
+if response.status_code == 200:
+    print('New API added successfully.')
+else:
+    print('Failed to add new API:', response.text)
+```
+
+## Updating an Existing API
+
+To update the details of an existing API, send a PUT request to the `/apis/{id}` endpoint with the updated API details and include the API key in the headers for authentication.
+
+### Example (using Python requests library):
+
+```python
+import requests
+
+base_url = 'https://api.apimanagement.com/v1'
+api_key = '<YOUR_API_KEY>'
+api_id = '<API_ID_TO_UPDATE>'
+
+# Update existing API
+url = f'{base_url}/apis/{api_id}'
+headers = {'Authorization': f'ApiKey {api_key}'}
+data = {
+    'name': 'Updated API Name',
+    'description': 'Updated description of the API',
+    # Updated API details...
+}
+response = requests.put(url, json=data, headers=headers)
+
+if response.status_code == 200:
+    print('API details updated successfully.')
+else:
+    print('Failed to update API details:', response.text)
 ```
 
 ## Conclusion
 
-These sample code snippets demonstrate how to use the API Authentication System to register users, authenticate users, and manage user sessions. By following these examples, you can integrate authentication into your application and secure your API endpoints effectively.
+These sample code snippets demonstrate how to use the API Management System with authentication to manage APIs effectively, including adding new APIs, updating existing APIs, and authenticating requests using API keys. By following these examples, you can integrate the API Management System into your application and securely manage your APIs.
