@@ -1,10 +1,10 @@
-# API Management System with Authentication - Sample Documentation
+# API Manager - Sample Documentation
 
-This documentation provides sample code snippets demonstrating how to use the API Management System with authentication to manage APIs, including authentication, authorization, and access control.
+This documentation provides sample code snippets demonstrating how to use the API Manager to manage APIs, including authentication, authorization, and access control.
 
-## Authenticating with the API Management System
+## Authenticating with the API Manager
 
-To authenticate with the API Management System, include an API key in the headers of each request.
+To authenticate with the API Manager, include an API key in the headers of each request.
 
 ### Example (using Python requests library):
 
@@ -86,4 +86,4 @@ else:
 
 ## Conclusion
 
-These sample code snippets demonstrate how to use the API Management System with authentication to manage APIs effectively, including adding new APIs, updating existing APIs, and authenticating requests using API keys. By following these examples, you can integrate the API Management System into your application and securely manage your APIs.
+These sample code snippets demonstrate how to use the API Manager to manage APIs effectively, including adding new APIs, updating existing APIs, and authenticating requests using API keys. By following these examples, you can integrate the API Manager into your application and securely manage your APIs.
