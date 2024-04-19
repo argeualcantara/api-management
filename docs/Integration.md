@@ -1,10 +1,10 @@
-# API Management System Integration Documentation
+# API Manager Integration Documentation
 
-This documentation provides guidance on integrating the API Management System API into your application for managing APIs with authentication.
+This documentation provides guidance on integrating the API Manager API into your application for managing APIs with authentication.
 
 ## API Base URL
 
-The base URL for accessing the API Management System API endpoints is:
+The base URL for accessing the API Manager API endpoints is:
 
 ```
 https://api.apimanagement.com/v1
@@ -12,7 +12,7 @@ https://api.apimanagement.com/v1
 
 ## Authentication
 
-The API Management System API requires authentication using API keys. Each request must include an API key in the headers for authentication.
+The API Manager API requires authentication using API keys. Each request must include an API key in the headers for authentication.
 
 ## Endpoints
 
@@ -68,16 +68,16 @@ Endpoint to delete an API from the system by its ID.
 
 ## Error Handling
 
-The API Management System API returns appropriate HTTP status codes along with error messages in case of errors. Handle these errors in your application accordingly.
+The API Manager API returns appropriate HTTP status codes along with error messages in case of errors. Handle these errors in your application accordingly.
 
 ## Example Usage
 
-Below is an example of how to use the API Management System API with Python's requests library:
+Below is an example of how to use the API Manager API with Python's requests library:
 
 ```python
 import requests
 
-# API Management System API base URL
+# API Manager API base URL
 base_url = 'https://api.apimanagement.com/v1'
 # Replace '<API_KEY>' with your actual API key
 api_key = '<API_KEY>'
@@ -99,4 +99,4 @@ print('List of APIs:', apis)
 
 ## Conclusion
 
-This documentation provides the necessary information to integrate the API Management System API into your application for managing APIs with authentication. Follow the guidelines and examples provided to effectively manage APIs in your system.
+This documentation provides the necessary information to integrate the API Manager API into your application for managing APIs with authentication. Follow the guidelines and examples provided to effectively manage APIs in your system.
