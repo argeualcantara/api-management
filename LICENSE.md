@@ -1,40 +1,21 @@
-# API Manager - Licensing Documentation
+MIT License
 
-## License
+Copyright (c) 2024 ChatGPT
 
-API Manager is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). See the [LICENSE](LICENSE) file for details.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-## Rate Limiting
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-API Manager employs rate limiting to ensure fair usage and prevent abuse of the API. The rate limits are as follows:
-
-- **Requests per Minute**: 1000 requests per minute
-- **Requests per Hour**: 10000 requests per hour
-
-Exceeding these limits may result in HTTP status code 429 (Too Many Requests).
-
-## Usage Terms
-
-By using the API Manager, you agree to the following terms:
-
-1. **Fair Usage**: Use the API Manager responsibly and avoid any activities that may cause harm to the system or disrupt service for other users.
-  
-2. **API Key**: Obtain an API key from the API Manager dashboard and include it in the headers of each request for authentication.
-
-3. **Rate Limiting**: Adhere to the rate limits imposed by the API Manager to prevent abuse of the system.
-
-4. **Attribution**: Include appropriate attribution to API Manager in your application or documentation when using the API.
-
-5. **Compliance**: Comply with all applicable laws and regulations when using the API Manager.
-
-6. **Support**: API Manager provides best-effort support. For any issues or inquiries, please contact [support@api-manager.com](mailto:support@api-manager.com).
-
-Failure to comply with these terms may result in suspension or termination of access to the API Manager.
-
-## Contact Information
-
-For inquiries or support regarding API Manager, please contact [support@api-manager.com](mailto:support@api-manager.com).
-
----
-
-**Note**: This documentation is subject to change without notice. Please refer to the latest version of the documentation for up-to-date information.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
